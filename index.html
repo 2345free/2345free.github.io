@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -217,6 +217,296 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://2345free.com/2017/10/22/Example-CASified-Java-Web-Application/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="骆晓啸">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="骆晓啸的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/22/Example-CASified-Java-Web-Application/" itemprop="url">Example CASified Java Web Application</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T20:23:16+08:00">
+                2017-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Example-CASified-Java-Web-Application"><a href="#Example-CASified-Java-Web-Application" class="headerlink" title="Example CASified Java Web Application"></a>Example CASified Java Web Application</h1><p>This is sample java web application that exercises the CAS protocol features via the Java CAS Client.</p>
+<h2 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h2><ul>
+<li>Adjust the url endpoints of the CAS server and<br>the application server in the <a href="https://github.com/UniconLabs/cas-sample-java-webapp/blob/master/src/main/webapp/WEB-INF/web.xml" target="_blank" rel="external"><code>web.xml</code></a> file.</li>
+</ul>
+<h2 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h2><ul>
+<li>Create a Java keystore at <code>/etc/cas/jetty/thekeystore</code> with the password <code>changeit</code>.</li>
+<li>Import your server certificate inside this keystore.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean package jetty:run-forked</div></pre></td></tr></table></figure>
+<p>The application will be available on:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:9080/sample</div></pre></td></tr></table></figure></p>
+<p>and<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://localhost:9443/sample</div></pre></td></tr></table></figure></p>
+<h2 id="Testing-High-Availability"><a href="#Testing-High-Availability" class="headerlink" title="Testing High Availability"></a>Testing High Availability</h2><p>Assuming you have deployed CAS on two nodes, you can use the sample application to make sure all nodes are properly<br>sharing the ticket state. To do this, in the <code>web.xml</code> file ensure that:</p>
+<ul>
+<li>The <code>casServerLoginUrl</code> of the <code>CAS Authentication Filter</code> points to CAS node 1 (i.e <code>https://cas1.sso.edu:8443/cas/login</code>).</li>
+<li>The <code>casServerUrlPrefix</code> of the <code>CAS Validation Filter</code> points to CAS node 2 (i.e <code>https://cas2.sso.edu:8443/cas</code>)</li>
+<li>For both of the above filters, the <code>serverName</code> should always point to the location where <em>this sample application</em> is deployed.</li>
+</ul>
+<p>Deploy the application and test. You may also want to reverse the order of CAS<br>nodes 1 and 2 in the above configuration, redeploy and test again.</p>
+<blockquote>
+<p>Alternatively, one could test distributed CAS nodes without any client application<br>set up using <a href="https://github.com/UniconLabs/duct" target="_blank" rel="external">this</a> small command line utility</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://2345free.com/2017/10/22/CAS-Overlay-Template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="骆晓啸">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="骆晓啸的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/22/CAS-Overlay-Template/" itemprop="url">CAS Overlay Template</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T20:20:10+08:00">
+                2017-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CAS-Overlay-Template"><a href="#CAS-Overlay-Template" class="headerlink" title="CAS Overlay Template"></a>CAS Overlay Template</h1><p>Generic CAS WAR overlay to exercise the latest versions of CAS. This overlay could be freely used as a starting template for local CAS war overlays. The CAS services management overlay is available <a href="https://github.com/apereo/cas-services-management-overlay" target="_blank" rel="external">here</a>.</p>
+<h1 id="Versions"><a href="#Versions" class="headerlink" title="Versions"></a>Versions</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">cas.version</span>&gt;</span>5.1.x<span class="tag">&lt;/<span class="name">cas.version</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h1><ul>
+<li>JDK 1.8+</li>
+</ul>
+<h1 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h1><p>The <code>etc</code> directory contains the configuration files and directories that need to be copied to <code>/etc/cas/config</code>.</p>
+<h1 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h1><p>To see what commands are available to the build script, run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./build.sh <span class="built_in">help</span></div></pre></td></tr></table></figure>
+<p>To package the final web application, run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./build.sh package</div></pre></td></tr></table></figure>
+<p>To update <code>SNAPSHOT</code> versions run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./build.sh package -U</div></pre></td></tr></table></figure>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><ul>
+<li>Create a keystore file <code>thekeystore</code> under <code>/etc/cas</code>. Use the password <code>changeit</code> for both the keystore and the key/certificate entries.</li>
+<li>Ensure the keystore is loaded up with keys and certificates of the server.</li>
+</ul>
+<p>On a successful deployment via the following methods, CAS will be available at:</p>
+<ul>
+<li><code>http://cas.server.name:8080/cas</code></li>
+<li><code>https://cas.server.name:8443/cas</code></li>
+</ul>
+<h2 id="Executable-WAR"><a href="#Executable-WAR" class="headerlink" title="Executable WAR"></a>Executable WAR</h2><p>Run the CAS web application as an executable WAR.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./build.sh run</div></pre></td></tr></table></figure>
+<h2 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h2><p>Run the CAS web application as an executable WAR via Spring Boot. This is most useful during development and testing.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./build.sh bootrun</div></pre></td></tr></table></figure>
+<h3 id="Warning"><a href="#Warning" class="headerlink" title="Warning!"></a>Warning!</h3><p>Be careful with this method of deployment. <code>bootRun</code> is not designed to work with already executable WAR artifacts such that CAS server web application. YMMV. Today, uses of this mode ONLY work when there is <strong>NO OTHER</strong> dependency added to the build script and the <code>cas-server-webapp</code> is the only present module. See <a href="https://github.com/apereo/cas/issues/2334" target="_blank" rel="external">this issue</a> and <a href="https://github.com/spring-projects/spring-boot/issues/8320" target="_blank" rel="external">this issue</a> for more info.</p>
+<h2 id="Spring-Boot-App-Server-Selection"><a href="#Spring-Boot-App-Server-Selection" class="headerlink" title="Spring Boot App Server Selection"></a>Spring Boot App Server Selection</h2><p>There is an app.server property in the pom.xml that can be used to select a spring boot application server.<br>It defaults to “-tomcat” but “-jetty” and “-undertow” are supported.<br>It can also be set to an empty value (nothing) if you want to deploy CAS to an external application server of your choice and you don’t want the spring boot libraries included. </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">app.server</span>&gt;</span>-tomcat<span class="tag">&lt;<span class="name">app.server</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Windows-Build"><a href="#Windows-Build" class="headerlink" title="Windows Build"></a>Windows Build</h2><p>If you are building on windows, try build.cmd instead of build.sh. Arguments are similar but for usage, run:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">build.cmd help</div></pre></td></tr></table></figure>
+<h2 id="External"><a href="#External" class="headerlink" title="External"></a>External</h2><p>Deploy resultant <code>target/cas.war</code>  to a servlet container of choice.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -260,7 +550,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T13:29:54+08:00">
                 2017-10-22
@@ -392,8 +682,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -445,7 +735,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
